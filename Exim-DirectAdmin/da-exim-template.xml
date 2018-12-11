@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template OS Linux - Exim Advanced</template>
-            <name>Template OS Linux - Exim Advanced</name>
+            <template>DirectAdmin - Exim</template>
+            <name>DirectAdmin - Exim</name>
             <groups>
                 <group>
                     <name>Templates</name>
@@ -304,7 +304,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template OS Linux - Exim Advanced:proc.num[exim4].last(0)}&lt;1</expression>
+            <expression>{DirectAdmin - Exim:proc.num[exim4].last(0)}&lt;1</expression>
             <name>Exim process is not running on {HOSTNAME}</name>
             <url/>
             <status>0</status>
@@ -314,7 +314,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux - Exim Advanced:exmailqueue.last(0)}&gt;100</expression>
+            <expression>{DirectAdmin - Exim:exmailqueue.last(0)}&gt;100</expression>
             <name>More than 100 Mails in the Queue</name>
             <url/>
             <status>0</status>
@@ -324,7 +324,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux - Exim Advanced:exmailqueue.last(0)}&gt;200</expression>
+            <expression>{DirectAdmin - Exim:exmailqueue.last(0)}&gt;200</expression>
             <name>More than 200 Mails in the Queue</name>
             <url/>
             <status>0</status>
@@ -334,7 +334,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux - Exim Advanced:exdelivered.nodata(900)}=1 | {Template OS Linux - Exim Advanced:exbytesdelivered.nodata(900)}=1 | {Template OS Linux - Exim Advanced:exerrors.nodata(900)}=1 | {Template OS Linux - Exim Advanced:exmailqueue.nodata(900)}=1 | {Template OS Linux - Exim Advanced:exreceived.nodata(900)}=1 | {Template OS Linux - Exim Advanced:exbytesreceived.nodata(900)}=1</expression>
+            <expression>{DirectAdmin - Exim:exdelivered.nodata(900)}=1 | {DirectAdmin - Exim:exbytesdelivered.nodata(900)}=1 | {DirectAdmin - Exim:exerrors.nodata(900)}=1 | {DirectAdmin - Exim:exmailqueue.nodata(900)}=1 | {DirectAdmin - Exim:exreceived.nodata(900)}=1 | {DirectAdmin - Exim:exbytesreceived.nodata(900)}=1</expression>
             <name>No data received from {HOST.NAME} for 15 minutes</name>
             <url/>
             <status>0</status>
@@ -371,7 +371,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux - Exim Advanced</host>
+                        <host>DirectAdmin - Exim</host>
                         <key>exerrors</key>
                     </item>
                 </graph_item>
@@ -403,7 +403,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux - Exim Advanced</host>
+                        <host>DirectAdmin - Exim</host>
                         <key>exreceived</key>
                     </item>
                 </graph_item>
@@ -415,7 +415,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux - Exim Advanced</host>
+                        <host>DirectAdmin - Exim</host>
                         <key>exdelivered</key>
                     </item>
                 </graph_item>
@@ -447,7 +447,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux - Exim Advanced</host>
+                        <host>DirectAdmin - Exim</host>
                         <key>exbytesreceived</key>
                     </item>
                 </graph_item>
@@ -459,7 +459,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux - Exim Advanced</host>
+                        <host>DirectAdmin - Exim</host>
                         <key>exbytesdelivered</key>
                     </item>
                 </graph_item>
