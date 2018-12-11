@@ -262,7 +262,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>proc.num[exim4]</key>
+                    <key>proc.num[exim]</key>
                     <delay>180</delay>
                     <history>60</history>
                     <trends>365</trends>
@@ -304,12 +304,12 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{DirectAdmin - Exim:proc.num[exim4].last(0)}&lt;1</expression>
+            <expression>{DirectAdmin - Exim:proc.num[exim].last(0)}&lt;1</expression>
             <name>Exim process is not running on {HOSTNAME}</name>
             <url/>
             <status>0</status>
             <priority>4</priority>
-            <description>The number of running processes called 'exim4' is 0. This indicates that the Exim server is not working appropriately.</description>
+            <description>The number of running processes called 'exim' is 0. This indicates that the Exim server is not working appropriately.</description>
             <type>0</type>
             <dependencies/>
         </trigger>
