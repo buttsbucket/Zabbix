@@ -335,7 +335,7 @@
         </trigger>
         <trigger>
             <expression>{DirectAdmin - Exim:exdelivered.nodata(900)}=1 | {DirectAdmin - Exim:exbytesdelivered.nodata(900)}=1 | {DirectAdmin - Exim:exerrors.nodata(900)}=1 | {DirectAdmin - Exim:exmailqueue.nodata(900)}=1 | {DirectAdmin - Exim:exreceived.nodata(900)}=1 | {DirectAdmin - Exim:exbytesreceived.nodata(900)}=1</expression>
-            <name>No data received from {HOST.NAME} for 15 minutes</name>
+            <name>No Exim data received from {HOST.NAME} for 15 minutes</name>
             <url/>
             <status>0</status>
             <priority>2</priority>
