@@ -12,3 +12,5 @@ crontab -e
 */5 * * * *  /etc/zabbix/scripts/da-eximstats.sh
 ```
 
+## Crédits
+Script de base: https://gist.github.com/crashdump/5697771
