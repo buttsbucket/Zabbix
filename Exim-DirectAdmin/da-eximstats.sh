@@ -26,7 +26,7 @@ zsend exdelivered `grep -m 1 Delivered $TMP2|awk '{print $3}'`
 zsend exerrors `grep -m 1 Errors $TMP2|awk '{print $3}'`
 zsend exbytesreceived `grep -m 1 "Received" $TMP2|awk '{print $2}'`
 zsend exbytesdelivered `grep -m 1 "Delivered" $TMP2|awk '{print $2}'`
-zsend exmailqueue `mailq | grep -c "[a-A0-9]"`
+zsend exmailqueue `exim -bpc | awk '{print $1}"`
  
 rm $TMP1
 rm $TMP2
