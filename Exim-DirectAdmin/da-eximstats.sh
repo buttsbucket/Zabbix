@@ -3,7 +3,7 @@
 # Set Variables
 EXIMLOG=/var/log/exim/mainlog
 MYLOG=/tmp/exim_status.log
-OFFSETFILE=/tmp/eximstatusoffset.dat
+OFFSETFILE=/etc/zabbix/scripts/da_eximstats_offset.dat
 EXIMSTATS=/usr/sbin/eximstats
 LOGTAIL=/usr/sbin/logtail
 ZABBIX_SENDER=/usr/bin/zabbix_sender
@@ -26,7 +26,7 @@ zsend exdelivered `grep -m 1 Delivered $TMP2|awk '{print $3}'`
 zsend exerrors `grep -m 1 Errors $TMP2|awk '{print $3}'`
 zsend exbytesreceived `grep -m 1 "Received" $TMP2|awk '{print $2}'`
 zsend exbytesdelivered `grep -m 1 "Delivered" $TMP2|awk '{print $2}'`
-zsend exmailqueue $(exim -bpc)
+zsend exmailqueue $(/usr/sbin/exim -bpc)
  
 rm $TMP1
 rm $TMP2
