@@ -9,7 +9,8 @@ wget https://github.com/webalternative/Zabbix/raw/master/Exim-DirectAdmin/da-exi
 chmod +x /etc/zabbix/scripts/da-eximstats.sh >/dev/null 2>&1
 crontab -e
 
-*/5 * * * *  /etc/zabbix/scripts/da-eximstats.sh
+*/5 * * * *  /etc/zabbix/scripts/da-eximstats.sh > /tmp/exim_zabbix.log
+
 ```
 
 ## Crédits
