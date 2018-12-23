@@ -14,6 +14,9 @@ chmod +x /etc/zabbix/scripts/da-eximstats.sh
 ### Templates
 Télécharger et importer les templates dans Zabbix
 
+### Firewall
+Ouvrir le port 10051 pour permettre l'envois d'informations à partir du zabbix-sender
+
 
 ## Crédits
 Script de base: https://gist.github.com/crashdump/5697771
