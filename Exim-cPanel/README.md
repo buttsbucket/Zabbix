@@ -5,7 +5,7 @@
 yum -y install curl zabbix-sender logcheck
 mkdir /etc/zabbix/scripts
 cd /etc/zabbix/scripts/
-wget https://github.com/webalternative/Zabbix/raw/master/Exim-DirectAdmin/cpanel-eximstats.sh
+wget https://github.com/webalternative/Zabbix/raw/master/Exim-cPanel/cpanel-eximstats.sh
 chmod +x /etc/zabbix/scripts/cpanel-eximstats.sh
 ```
 ### Ajouter la tâche CRON
